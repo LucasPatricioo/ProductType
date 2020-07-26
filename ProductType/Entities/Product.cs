@@ -18,7 +18,8 @@ namespace ProductType.Entities
         public virtual string PriceTag() {
             StringBuilder text = new StringBuilder();
             text.Append(Name);
-            text.AppendLine(" $ " + Price.ToString("F2", CultureInfo.InvariantCulture));
+            text.Append(" $ ");
+            text.AppendLine(Price.ToString("F2", CultureInfo.InvariantCulture));
             return text.ToString();
         }
     }
